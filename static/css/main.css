@@ -1,0 +1,261 @@
+body {
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+}
+
+
+section {
+    height: 100vh;
+}
+
+p {
+    font-size: 1.1rem;
+}
+
+h1 {
+    font-size: 2.9rem;
+}
+
+.index-navbar {
+    background: #222323;
+    box-shadow: 0px 15px 10px -15px #1b2021;  
+    height: 5vh;
+    position: sticky;
+    top: 0%;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
+
+.navbar-container {
+    /* s */
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar-items {
+    /* background-color: yellow; */
+    height: 100%;
+    list-style-type: none;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0;
+}
+
+.navbar-item {
+    margin: 0;
+    padding: 0;
+    color: #F0F6F0;
+    flex-grow: 1;
+    text-align: center;
+    transition: 0.3s ease-out;
+    text-decoration: none;
+}
+
+.navbar-item:hover {
+    color: rgb(74, 84, 173);
+}
+
+#welcome-section {
+    background: url('../images/image3.png');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    
+    color: #eee7e7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.about-me {
+    /* background-color: green; */
+    display: flex;
+    justify-content: space-around;
+    width: 80vw;
+    height: 50vh;
+    padding: 30px;
+}
+
+.welcome-header {
+    align-self: center;
+}
+
+.description {
+    text-align: center;
+    padding: 10px;
+    width: 30%;
+}
+
+.description .fa-github, 
+.description .fa-linkedin, 
+.description .fa-file {
+    font-size: 30px;
+    margin: 10px;
+    color: white;
+    transition: 0.4s ease-in-out;
+}
+
+.description .fa-file:hover, 
+.description .fa-github:hover,
+.description .fa-linkedin:hover {
+    color: rgb(74, 84, 173);
+}
+
+
+.link-to-projects {
+    align-self: flex-end;
+    margin: 50px auto;
+}
+
+#projects {
+    background: #eee7e7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
+
+.projects-header {
+    color: #222323;
+    margin: 20px;
+}
+
+.project-list {
+    display: flex;
+    width: 80vw;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #333;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+
+.card {
+    margin: 20px;
+    
+}
+
+#contact {
+    background: url('../images/form.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: space-around;
+    height: 100vh;
+}
+
+.contactme-form {
+    background: linear-gradient(rgb(74, 84, 173), #222323);
+    border-radius: 12px;
+    text-align: center;
+    width: 40vw;
+    height: 60vh;
+    align-self: center;
+    padding: 20px;
+    margin: 2%;
+}
+
+.contactme-form h1{
+    color: #F0F6F0;
+}
+
+@media (max-width: 1050px) {
+    .index-navbar {
+        justify-content: center;
+    }
+
+    .navbar-container {
+        width: 70%;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+
+    .about-me {
+        flex-direction:column;
+        height: 80vh;
+        margin-top: 10px;
+        padding: 15px;
+    }
+    
+    .welcome-header {
+        align-self: flex-start;
+    }
+    
+    .description {
+        align-self: center;
+        width: 80%;
+    }
+
+    .link-to-projects {
+        /* background-color: green; */
+        align-self: flex-end;
+        margin: 0px auto;
+    }
+
+    
+    .projects-header {
+        margin: 30px;
+    }
+    
+    .project-list {
+        flex-direction: column;
+        height: 70vh;
+        padding: 30px;
+        /* background-color: aqua; */
+        overflow-y: scroll;
+    }
+    
+    .contactme-form {
+        width: 87vw;
+        height: 400px;
+    }
+}
+
+@media (max-width: 500px) {
+    .index-navbar {
+        height: 5.7vh;
+    }
+
+    .navbar-container {
+        width: 100%;
+    }
+
+    p {
+        font-size: .8rem;
+    }
+    
+    h1 {
+        font-size: 1.4rem;
+    }
+
+    .description .fa-github, 
+    .description .fa-linkedin,
+    .description .fa-file {
+        font-size: 1.4rem;
+        margin: 5px;
+    }
+
+    .project-list .card {
+        width: 100%;
+        margin: 5px;
+    }
+    
+    .contactme-form {
+        height: 380px;
+    }
+}
