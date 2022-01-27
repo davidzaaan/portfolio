@@ -1,1 +1,1 @@
-web: gunicorn app:portfolio.py
+web: gunicorn app:portfolio
