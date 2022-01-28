@@ -33,7 +33,7 @@ def index():
 
         try:
             msg = Message('I saw your portfolio page', sender=(guest, email), recipients=[my_email])
-            msg.body = message
+            msg.body = f"{message} by: {email}"
             mail.send(msg)
             return render_template('thankyou.html', header='Thank you',  message="I'll be in contact with you as soon as possible :)")
         except:
