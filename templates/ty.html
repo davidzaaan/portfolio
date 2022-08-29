@@ -1,0 +1,14 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+<div class="message-container">
+    <!-- octocat -->
+    <i class="nes-octocat animate"></i>
+    <div class="message nes-balloon from-left">
+        <h1>Thank you, I'll be in contact with you soon!</h1>
+        <a class="nes-btn is-primary go-back-btn" id="to-home-btn" href="{% url 'index' %}">Go back</a>
+    </div>
+</div>
+
+{% endblock content %}

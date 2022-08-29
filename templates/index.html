@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <link href="https://unpkg.com/nes.css/css/nes.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="./node_modules/nes.css/css/nes.min.css">
+    <!-- minify -->
+    <link href="https://unpkg.com/nes.css@2.3.0/css/nes.min.css" rel="stylesheet" />
+    <!-- latest -->
+    <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
+    <!-- core style only -->
+    <link href="https://unpkg.com/nes.css/css/nes-core.min.css" rel="stylesheet" />
+
+    <!-- Homepage styling -->
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+    <!-- Thanks page styling -->
+    <link rel="stylesheet" href="{% static 'css/ty.css' %}">
+
+    <!-- Page scripting -->
+    <script src="{% static 'js/index.js' %}" defer></script>
+
+    <title>David Monroy</title>
+</head>
+
+<body>
+    {% block content %}
+    <main>
+        <section id="home">
+            <!-- octocat
+            <i class="nes-octocat animate is-small"></i> -->
+            <div class="nes-container with-title">
+                <p class="title">me.__str__()</p>
+                <div class="me">
+                    <div class="name">
+                        <h1>Hi, I am David</h1>
+                        <div class="links">
+                            <!-- github-->
+                            <a href="https://github.com/davidzaaan" target="_blank"
+                                class="nes-icon github is-medium"></a>
+                            <!-- linkedin -->
+                            <a href="linkedin.com/in/david-monroy-4a496a210" target="_blank"
+                                class="nes-icon linkedin is-medium"></a>
+                        </div>
+                    </div>
+                    <div class="description">
+                        <p>A proficient backend developer who has been developing API's and server side
+                            applications using
+                            high-level languages like Python and JavaScript. I'm also a passionate and constant learner
+                            about
+                            Computer Science and all its
+                            related fields.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <div class="nes-container with-title">
+                <p class="title">me.get_projects()</p>
+
+                <div class="projects-all">
+
+                    <div class="chat-app project">
+                        <a href="https://chat-dm.herokuapp.com/" target="_blank" class="project-title">Chat App 📱</a>
+                        <p class="chat-desc">
+                            Join random rooms to chat with your friends, meet new people or maybe fall in love?...
+                        </p>
+                        <!-- tech used -->
+                        <div class="stack-used">
+                            <a class="nes-badge">
+                                <span class="is-primary">
+                                    Python
+                                </span>
+                            </a>
+                            <a class="nes-badge">
+                                <span class="is-success">Django</span>
+                            </a>
+                            <a class="nes-badge">
+                                <span class="is-warning">JavaScript</span>
+                            </a>
+
+                            <a class="nes-badge is-splited">
+                                <span class="is-dark">HTML</span>
+                                <span class="is-primary">CSS</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="harry-app project">
+                        <a href="https://hp-api-dm.herokuapp.com/" target="_blank" class="project-title">Harry Potter
+                            🪄</a>
+                        <p class="harry-desc">
+                            See all about your Hogwarts's favourites characters
+                        </p>
+                        <!-- tech used -->
+                        <div class="stack-used">
+                            <a class="nes-badge">
+                                <span class="is-primary">
+                                    Python
+                                </span>
+                            </a>
+
+                            <a class="nes-badge">
+                                <span class="is-dark">Flask</span>
+                            </a>
+
+                            <a class="nes-badge is-splited">
+                                <span class="is-dark">HTML</span>
+                                <span class="is-primary">CSS</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="weather-app project">
+                        <a href="https://elclimatoday.herokuapp.com/" target="_blank" class="project-title">Weather App
+                            ☁️</a>
+                        <p class="weather-desc">
+                            Should I carry an umbrella? 🤔
+                            check your local weather and forecast with this weather app
+                        </p>
+                        <!-- tech used -->
+                        <div class="stack-used">
+
+                            <a class="nes-badge">
+                                <span class="is-warning">JavaScript</span>
+                            </a>
+
+                            <a class="nes-badge">
+                                <span class="is-success">NodeJS</span>
+                            </a>
+
+                            <a class="nes-badge is-splited">
+                                <span class="is-dark">HTML</span>
+                                <span class="is-primary">CSS</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="todo-app project">
+                        <a href="https://todo-django-dm.herokuapp.com/" target="_blank" class="project-title">ToDo
+                            App</a>
+                        <p class="todo-desc">Organize your tasks and daily activities with this ToDo web application
+                        </p>
+                        <!-- tech used -->
+                        <div class="stack-used">
+                            <a class="nes-badge">
+                                <span class="is-primary">
+                                    Python
+                                </span>
+                            </a>
+                            <a class="nes-badge">
+                                <span class="is-success">Django</span>
+                            </a>
+                            <a class="nes-badge">
+                                <span class="is-warning">JavaScript</span>
+                            </a>
+
+                            <a class="nes-badge is-splited">
+                                <span class="is-dark">HTML</span>
+                                <span class="is-primary">CSS</span>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="nes-container with-title">
+                <p class="title">me.get_in_touch()</p>
+
+                <form action="{% url 'index' %}" class="contact-form" method="post">
+                    {% csrf_token %}
+                    <div class="nes-field">
+                        <label for="name_field">Your name</label>
+                        <input type="text" id="name_field" class="nes-input" name="name" required>
+                    </div>
+
+                    <div class="nes-field">
+                        <label for="name_field">Your email</label>
+                        <input type="email" id="name_field" class="nes-input" name="email" required>
+                    </div>
+
+                    <div class="nes-field">
+                        <label for="textarea_field">Comments</label>
+                        <textarea id="textarea_field" class="nes-textarea" name="comments" required></textarea>
+                    </div>
+
+                    <button type="submit" class="nes-btn submit-form-btn is-primary">Send</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <div class="pages-btns">
+        <a id="theme-toggler" class="nes-btn switch-theme-btn">Dark</a>
+        <a class="nes-btn is-primary" id="to-home-btn" href="#home">Home</a>
+        <a class="nes-btn is-primary" id="to-projects-btn" href="#projects">Projects</a>
+        <a class="nes-btn is-primary" id="to-contact-btn" href="#contact">Contact</a>
+    </div>
+
+    {% endblock content %}
+</body>
+
+</html>
