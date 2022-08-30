@@ -12,7 +12,7 @@ def index(request):
             f'{guest_name} saw your portfolio',
             guest_feedback,
             guest_email,
-            "odmh2711@gmail.com",
+            ["odmh2711@gmail.com"],
             fail_silently=True,
         )
 
