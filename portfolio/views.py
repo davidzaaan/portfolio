@@ -1,6 +1,5 @@
 from django.shortcuts import render, redirect
 from django.core.mail import send_mail
-import os
 
 def index(request):
 
@@ -13,7 +12,7 @@ def index(request):
             f'{guest_name} saw your portfolio',
             guest_feedback,
             guest_email,
-            os.environ.get("EMAIL_ME"),
+            "odmh2711@gmail.com",
             fail_silently=True,
         )
 
