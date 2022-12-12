@@ -10,7 +10,7 @@ def index(request):
 
         send_mail(
             f'{guest_name} saw your portfolio',
-            guest_feedback,
+            f'{guest_feedback} by: {guest_email}',
             guest_email,
             ["odmh2711@gmail.com"],
             fail_silently=True,
