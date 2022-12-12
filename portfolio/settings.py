@@ -12,7 +12,6 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 
 from pathlib import Path
 import os
-import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -21,18 +20,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
-# SECRET_KEY = os.environ.get("SECRET_KEY")
-SECRET_KEY = os.environ.get("SECRET_KEY", "This is a secret key")
+SECRET_KEY = os.environ.get("SECRET_KEY")
 
-# DEBUG = str(os.environ.get("DEBUG")) == "1"
-DEBUG = 'RENDER' not in os.environ
+DEBUG = str(os.environ.get("DEBUG")) == "1"
 
-ALLOWED_HOSTS = []
-
-# Environment variable set by Render
-RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
-if RENDER_EXTERNAL_HOSTNAME:
-    ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
+ALLOWED_HOSTS = os.environ.get("ALLOWED_HOST")
 
 # Application definition
 INSTALLED_APPS = [
@@ -81,13 +73,12 @@ WSGI_APPLICATION = 'portfolio.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-# DATABASES = {
-#     'default': dj_database_url.config(
-#         # Feel free to alter this value to suit your needs.
-#         default='postgresql://postgres:postgres@localhost:5432/mysite',
-#         conn_max_age=600
-#     )
-# }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
 
 
 # Password validation
